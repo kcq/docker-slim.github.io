@@ -1,0 +1,20 @@
+
+.button {
+	background:#FFFFFF;
+	border:1px solid #7b8A8E;
+	box-shadow:3px 4px 0 rgba(0,0,0,0.1);
+	color:#7b8A8E;
+	display:inline-block;
+	font-family:"klavika-web", Helvetica, sans-serif;
+	font-size:15px;
+	font-weight:600;
+	letter-spacing:1px;
+	margin-bottom:4px;
+	padding:10px 30px;
+	text-transform:uppercase;text-decoration:none
+}
+
+.button:hover,.button:active,.button:focus{text-decoration:none}
+
+.button:hover{background:#7b8A8E;border:1px solid #7b8A8E;color:#FFFFFF}
+
