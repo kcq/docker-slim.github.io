@@ -57,7 +57,7 @@
         <h2>Examples</h2>
         <h3>Minify Docker Image and Generate Security Profiles.</h3>
         <p>
-          Build a new Docker image based on static and dynamic analysis of the target.
+          Keep doing what you are doing. No need to change anything. Use the base image you want. Use the package manager you want. Don't worry about hand optimizing your Dockerfile. Don't worry about manually creating Seccomp and AppArmor security profiles.
         </p>
       </div>
     </div>
@@ -67,6 +67,13 @@
         <div class="terminal">
 
           <div class="terminal-content">
+            <span>
+              <span class="text-blue">$</span>
+              <span>head -n 1 Dockerfile</span>
+            </span>
+            <span>FROM <span class="text-green">ubuntu:14.04</span></span>
+            <span>&nbsp;</span>
+
             <span>
               <span class="text-blue">$</span>
               <span>docker images my/sample-node-app</span>
