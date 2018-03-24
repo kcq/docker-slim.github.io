@@ -79,26 +79,34 @@
               <span>docker images my/sample-node-app</span>
             </span>
             <span class="pre">REPOSITORY                TAG                 IMAGE ID            CREATED             SIZE</span>
-            <span class="pre">my/sample-node-app        latest              8a16969f12b0        10 minutes ago      <span class="text-green">431.7 MB</span></span>
+            <span class="pre">my/sample-node-app        latest              31be09316a19        4 minutes ago      <span class="text-green">432MB</span></span>
             <span>&nbsp;</span>
             <span>
               <span class="text-blue">$</span>
               <span class="text-orange">docker-slim build --http-probe my/sample-node-app</span>
             </span>
-            <span>INFO[0000] docker-slim: inspecting 'fat' image metadata...</span>
-            <span>INFO[0000] docker-slim: starting instrumented 'fat' container... </span>
-            <span>docker-slim: press <enter> when you are done using the container...</span>
-            <span>INFO[0005] docker-slim: shutting down 'fat' container... </span>
-            <span>INFO[0006] docker-slim: processing instrumented 'fat' container info...</span>
-            <span>INFO[0006] docker-slim: building 'slim' image...</span>
-            <span>INFO[0010] docker-slim: created new image: my/sample-node-app.slim ( has data artifacts: true ).</span>
+            <span>docker-slim[build]: state=started</span>
+            <span>docker-slim[build]: info=params target=my/sample-node-app continue.mode=enter</span>
+            <span>docker-slim[build]: state=inspecting.image</span>
+            <span>docker-slim[build]: state=inspecting.container</span>
+            <span>docker-slim[build]: info=prompt message='press &lt;enter&gt; when you are done using the container'</span>
+            <span>docker-slim[build]: state=http.probe.starting</span>
+            <span>docker-slim[build]: state=http.probe.done</span>
+            <span>docker-slim[build]: state=processing</span>
+            <span>docker-slim[build]: state=building message='building minified image'</span>
+            <span>docker-slim[build]: state=completed</span>
+            <span>docker-slim[build]: info=results status='<span class="text-green">MINIFIED BY 30.88X</span> [432330078 (432 MB) => 14002579 (14 MB)]'</span>
+            <span>docker-slim[build]: info=results  image.name=my/sample-node-app.slim image.size='14 MB' data=true</span>
+            <span></span>
+            <span></span>
+            <span></span>
             <span>&nbsp;</span>
             <span>
               <span class="text-blue">$</span>
               <span>docker images my/sample-node-app.slim</span>
             </span>
             <span class="pre">REPOSITORY                TAG                 IMAGE ID            CREATED             SIZE</span>
-            <span class="pre">my/sample-node-app.slim   latest              f6ac586a418f        1 minute ago        <span class="text-green">14 MB</span></span>
+            <span class="pre">my/sample-node-app.slim   latest              b72b685be7fe        1 minute ago        <span class="text-green">14 MB</span></span>
           </div>
         </div>
       </div>
