@@ -42,7 +42,7 @@
 
         <h1>Minify and Secure Your Docker Containers. Frictionless!</h1>
 
-        <a class="button" href="https://github.com/docker-slim/docker-slim/releases/tag/1.22">Download 1.22</a>
+        <a class="button" href="https://github.com/docker-slim/docker-slim/releases/tag/1.23">Download 1.23</a>
         <a class="button" href="https://github.com/docker-slim/docker-slim">Learn More</a>
       </div>
     </div>
@@ -89,8 +89,10 @@
             <span>docker-slim[build]: info=params target=my/sample-node-app continue.mode=enter</span>
             <span>docker-slim[build]: state=inspecting.image</span>
             <span>docker-slim[build]: state=inspecting.container</span>
+            <span>docker-slim[build]: info=container ... target.port.list=[32908] target.port.info=[8000/tcp => 0.0.0.0:32908]</span>
             <span>docker-slim[build]: info=prompt message='press &lt;enter&gt; when you are done using the container'</span>
             <span>docker-slim[build]: state=http.probe.starting</span>
+            <span>docker-slim[build]: info=http.probe.call status=200 method=GET target=http://127.0.0.1:32908/ attempt=1 error=none</span>
             <span>docker-slim[build]: state=http.probe.done</span>
             <span>docker-slim[build]: state=processing</span>
             <span>docker-slim[build]: state=building message='building minified image'</span>
