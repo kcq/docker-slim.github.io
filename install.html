@@ -8,6 +8,17 @@
       gtag('js', new Date());
       gtag('config', 'UA-137780591-1');
     </script>
+    <script>
+      function onCopyCommand(id) {
+        try {
+          const copyCmd = document.getElementById(id);
+          copyCmd.select();
+          document.execCommand('copy');
+        } catch(e) {
+          console.log('error copying command');
+        }
+      }
+    </script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,9 +67,13 @@
 
         See the release <a href="https://github.com/docker-slim/docker-slim/blob/master/CHANGELOG.md"><code>CHANGELOG</code></a> for more details.<br/><br/>
 
-        Use the prepackaged Docker image (<a href="https://hub.docker.com/r/dslim/docker-slim/tags"><code>dslim/docker-slim</code></a>) or install the executables in a directory included in your system's <code>PATH</code>. You can get the experimental ARM32 and ARM64 packages from the github page.<br/><br/>
-
         Join the <a href="https://gitter.im/docker-slim/community">Gitter channel</a> or the <a href="https://discord.gg/9tDyxYS">Discord server</a> if you have any questions, ideas or any kind of feedback.<br/><br/>
+
+        If you already have <code>docker-slim</code> installed use the <code>update</code> command to get the latest version: <code>docker-slim update</code><br/><br/>
+
+        <h1>Downloads</h1>
+
+        Install the executables in a directory included in your system's <code>PATH</code>. You can get the experimental ARM32 and ARM64 packages from the github page.<br/><br/>
 
         <a class="button" href="https://downloads.dockerslim.com/releases/1.36.1/dist_mac.zip">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 150" width="75" height="75">
@@ -180,6 +195,38 @@
             </g>
           </svg>
         </a>
+
+        <br/><br/>
+        <a href="https://hub.docker.com/r/dslim/docker-slim/tags"><h1>Docker</h1></a>
+
+        <div class="center styles__pullCode___38_jh styles__copyable___2_hGB" onclick=onCopyCommand('copyDockerCommand')>
+        <input class="styles__input___1GNF9" id="copyDockerCommand" readonly="" value="docker pull dslim/docker-slim">
+        <div class="styles__button___1h9sK">
+        <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" class="dicon   " viewBox="0 0 24 24">
+        <g>
+        <path fill="none" d="M0 0h24v24H0V0z"></path><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z">
+        </path>
+        </g>
+        </svg>
+        </div>
+        </div>
+        <br/>
+
+        <a href="https://formulae.brew.sh/formula/docker-slim"><h1>Homebrew</h1></a>
+
+        <div class="center styles__pullCode___38_jh styles__copyable___2_hGB" onclick=onCopyCommand('copyBrewCommand')>
+        <input class="styles__input___1GNF9" id="copyBrewCommand" readonly="" value="brew install docker-slim">
+        <div class="styles__button___1h9sK">
+        <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" class="dicon   " viewBox="0 0 24 24">
+        <g>
+        <path fill="none" d="M0 0h24v24H0V0z"></path><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z">
+        </path>
+        </g>
+        </svg>
+        </div>
+        </div>
+        <br/><br/><br/><br/>
+
       </div>
     </div>
   </div>
